@@ -2,7 +2,12 @@
 
 namespace App\Domain\Shared\Entity;
 
-abstract class BaseEntity
+use App\Application\Contracts\Arrayable;
+
+abstract class BaseEntity implements Arrayable
 {
-    //
+    public function toArray(): array
+    {
+        return [];
+    }
 }
