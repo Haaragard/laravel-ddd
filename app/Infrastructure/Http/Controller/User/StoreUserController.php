@@ -17,7 +17,6 @@ class StoreUserController extends Controller
 
     public function __invoke(StoreUserRequest $request): JsonResponse
     {
-        dd('aa');
         $createdUserData = $this->useCase->handle(
             new StoreUserDTO(
                 $request->validated('name'),
