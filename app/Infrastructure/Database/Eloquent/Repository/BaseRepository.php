@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Infrastructure\Shared\Database\Eloquent\Repository;
+namespace App\Infrastructure\Database\Eloquent\Repository;
 
 use App\Domain\Shared\Repository\BaseRepositoryInterface;
 
