@@ -5,7 +5,7 @@ namespace App\Application\Provider;
 use Illuminate\Contracts\Support\DeferrableProvider;
 use Illuminate\Support\ServiceProvider;
 
-class DependencyServiceProvider extends ServiceProvider implements DeferrableProvider
+class DependencyServiceProvider extends ServiceProvider
 {
     private array $dependencies;
 
@@ -24,10 +24,5 @@ class DependencyServiceProvider extends ServiceProvider implements DeferrablePro
         foreach ($this->dependencies as $interface => $dependency) {
             $this->app->bind($interface, $dependency);
         }
-    }
-
-    public function provides(): array
-    {
-        return $this->dependencies;
     }
 }
