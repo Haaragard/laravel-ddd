@@ -3,6 +3,7 @@
 namespace App\Domain\User\Service;
 
 use App\Domain\Shared\Service\BaseService;
+use App\Domain\User\DTO\SearchUserDTO;
 use App\Domain\User\DTO\StoreUserDTO;
 use App\Domain\User\Entity\UserEntity;
 use App\Domain\User\Repository\UserRepositoryInterface;
@@ -16,5 +17,10 @@ class UserService extends BaseService
     public function store(StoreUserDTO $dto): UserEntity
     {
         return $this->repository->store($dto);
+    }
+
+    public function search(SearchUserDTO $dto): UserEntity
+    {
+        return $this->repository->findBy($dto);
     }
 }
