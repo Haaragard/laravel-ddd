@@ -8,4 +8,5 @@ use App\Domain\Shared\Entity\BaseEntity;
 interface BaseRepositoryInterface
 {
     public function store(BaseDTO $dto): BaseEntity;
+    public function findBy(BaseDTO $dto): BaseEntity;
 }
