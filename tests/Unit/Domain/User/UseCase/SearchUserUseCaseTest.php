@@ -3,11 +3,9 @@
 namespace Tests\Unit\Domain\User\UseCase;
 
 use App\Domain\User\DTO\SearchUserDTO;
-use App\Domain\User\DTO\StoreUserDTO;
 use App\Domain\User\Entity\UserEntity;
 use App\Domain\User\Service\UserService;
 use App\Domain\User\UseCase\SearchUserUseCase;
-use App\Domain\User\UseCase\StoreUserUseCase;
 use Tests\TestCase;
 
 class SearchUserUseCaseTest extends TestCase
