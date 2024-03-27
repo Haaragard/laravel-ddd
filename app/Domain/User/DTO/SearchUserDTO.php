@@ -7,9 +7,9 @@ use App\Domain\Shared\DTO\BaseDTO;
 class SearchUserDTO extends BaseDTO
 {
     public function __construct(
-        public ?int $id,
-        public ?string $name,
-        public ?string $email
+        public ?int $id = null,
+        public ?string $name = null,
+        public ?string $email = null
     ) {}
 
     public function toArray(): array
